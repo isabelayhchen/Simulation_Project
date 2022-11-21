@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class Overhead_Compartment:
 
     num_of_bins = 0
@@ -12,7 +11,6 @@ class Overhead_Compartment:
         self.num_of_cols = num_of_cols
         self.num_of_slots = self.create_slots() # initialize bins
         self.occupancy = np.zeros([self.num_of_rows, self.num_of_cols])
-
 
     def create_slots(self):
         """
@@ -38,6 +36,10 @@ class Overhead_Compartment:
 
     def check_occupancy(self, row, col):
         return self.occupancy[row-1][col-1]
+
+    def find_nearest_bin(self, seat):
+        # TODO: complete this function to find the nearest bin slot
+        return
 
 ovc = Overhead_Compartment(10, 3)
 ovc.print_occupancy()
